@@ -165,6 +165,25 @@
 
     .btn-download:active { transform: translateY(0); }
 
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.25rem;
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      transition: border-color 0.25s ease, color 0.25s ease;
+    }
+    .btn-ghost:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
     .btn-meta {
       font-size: 0.9rem;
       color: var(--muted);
@@ -331,8 +350,11 @@
         <h1 class="brand">MOSES<em>.</em></h1>
         <p class="lede">专业硬件检测、AMD / Intel 调校与压力测试，装好即用。</p>
         <div class="cta-row">
-          <a class="btn-download" id="downloadBtn" href="https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.0/MOSES_Setup_v1.0.0.exe">
-            下载 Windows 安装包
+          <a class="btn-download" id="downloadBtnCn" href="https://ghfast.top/https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.0/MOSES_Setup_v1.0.0.exe">
+            国内加速下载
+          </a>
+          <a class="btn-ghost" id="downloadBtn" href="https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.0/MOSES_Setup_v1.0.0.exe">
+            GitHub 原链
           </a>
           <p class="btn-meta">当前版本 <strong id="verLabel">v1.0.0</strong> · 约 171 MB</p>
         </div>
@@ -375,17 +397,31 @@
 
   <script>
     (function () {
-      var feed = "https://raw.githubusercontent.com/qaqqqe1123/moses-update/main/latest.json";
+      var feeds = [
+        "https://cdn.jsdelivr.net/gh/qaqqqe1123/moses-update@main/latest.json",
+        "https://raw.githubusercontent.com/qaqqqe1123/moses-update/main/latest.json",
+        "https://ghfast.top/https://raw.githubusercontent.com/qaqqqe1123/moses-update/main/latest.json"
+      ];
       var btn = document.getElementById("downloadBtn");
+      var btnCn = document.getElementById("downloadBtnCn");
       var ver = document.getElementById("verLabel");
-      fetch(feed, { cache: "no-store" })
-        .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (data) {
-          if (!data) return;
-          if (data.version) ver.textContent = "v" + data.version;
-          if (data.download_url) btn.href = data.download_url;
-        })
-        .catch(function () {});
+
+      function apply(data) {
+        if (!data) return;
+        if (data.version) ver.textContent = "v" + data.version;
+        if (data.download_url) btn.href = data.download_url;
+        if (data.download_url_cn) btnCn.href = data.download_url_cn;
+        else if (data.download_url) btnCn.href = "https://ghfast.top/" + data.download_url;
+      }
+
+      function tryFeed(i) {
+        if (i >= feeds.length) return;
+        fetch(feeds[i], { cache: "no-store" })
+          .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+          .then(apply)
+          .catch(function () { tryFeed(i + 1); });
+      }
+      tryFeed(0);
     })();
   </script>
 </body>
