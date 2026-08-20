@@ -1,1 +1,6 @@
-{"version":"1.0.0","notes":"首发：启动密码验证；安装包优化；支持检查更新。","download_url":"https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.0/MOSES_Setup_v1.0.0.exe"}
+{
+  "version": "1.0.0",
+  "notes": "首发：启动密码验证；安装包优化；支持检查更新。",
+  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.0/MOSES_Setup_v1.0.0.exe",
+  "download_url_cn": "https://ghfast.top/https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.0/MOSES_Setup_v1.0.0.exe"
+}
