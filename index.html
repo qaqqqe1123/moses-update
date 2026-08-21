@@ -18,8 +18,10 @@
       --teal: #2dd4bf;
       --teal-deep: #0f766e;
       --line: #1c2e3d;
-      --font-display: "Syne", sans-serif;
-      --font-body: "Manrope", sans-serif;
+      --font-display: "Syne", "Segoe UI", sans-serif;
+      --font-body: "Microsoft YaHei UI", "PingFang SC", "Manrope", "Segoe UI", sans-serif;
+      --font-zh: "Microsoft YaHei UI", "PingFang SC", "Noto Sans SC", sans-serif;
+      --brand-size: clamp(2.5rem, 3.2vw + 1.1rem, 3.6rem);
       --max: 1080px;
     }
 
@@ -31,6 +33,8 @@
       color: var(--ink);
       line-height: 1.55;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
       min-height: 100vh;
     }
     a { color: inherit; text-decoration: none; }
@@ -117,11 +121,22 @@
     .brand {
       font-family: var(--font-display);
       font-weight: 800;
-      font-size: clamp(3rem, 6vw + 1rem, 5rem);
-      line-height: 0.95;
-      letter-spacing: -0.04em;
+      font-size: var(--brand-size);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
       margin-bottom: 1rem;
+      color: #f4fbff;
+      -webkit-font-smoothing: antialiased;
       text-rendering: geometricPrecision;
+    }
+    .brand .en { font-family: var(--font-display); }
+    .brand .zh {
+      font-family: var(--font-zh);
+      font-weight: 700;
+      font-size: 0.72em;
+      letter-spacing: 0.04em;
+      margin-left: 0.08em;
+      vertical-align: 0.06em;
     }
     .brand b {
       font-weight: inherit;
@@ -131,9 +146,10 @@
     .lede {
       max-width: 22rem;
       color: var(--muted);
-      font-size: 1.08rem;
+      font-size: 1rem;
       font-weight: 400;
       margin-bottom: 1.75rem;
+      font-family: var(--font-zh);
     }
 
     .actions {
@@ -240,15 +256,16 @@
       margin-bottom: 0.55rem;
     }
     .panel-head h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.7rem, 2.5vw + 0.8rem, 2.2rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      font-family: var(--font-zh);
+      font-size: clamp(1.45rem, 1.5vw + 1rem, 1.85rem);
+      font-weight: 700;
+      letter-spacing: 0.02em;
       margin-bottom: 0.5rem;
     }
     .panel-head p {
       color: var(--muted);
       font-size: 1rem;
+      font-family: var(--font-zh);
     }
 
     .list {
@@ -268,15 +285,16 @@
     }
     .list li:hover { padding-left: 0.4rem; }
     .list .t {
-      font-family: var(--font-display);
+      font-family: var(--font-zh);
       font-weight: 700;
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       color: var(--teal);
     }
     .list .d {
       color: #c5d3df;
-      font-size: 1.02rem;
-      font-weight: 500;
+      font-size: 0.98rem;
+      font-weight: 400;
+      font-family: var(--font-zh);
     }
 
     .contact {
@@ -289,14 +307,14 @@
       border-top: 1px solid var(--line);
     }
     .contact h3 {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
+      font-family: var(--font-zh);
+      font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 0.2rem;
     }
-    .contact p { color: var(--muted); font-size: 0.95rem; }
+    .contact p { color: var(--muted); font-size: 0.95rem; font-family: var(--font-zh); }
     .contact button {
-      font-family: var(--font-display);
+      font-family: var(--font-zh);
       font-weight: 700;
       font-size: 1rem;
       color: var(--teal);
@@ -397,7 +415,7 @@
 
     <div class="hero-body">
       <div class="hero-copy">
-        <h1 class="brand">MOSES<b>.</b></h1>
+        <h1 class="brand"><span class="en">MOSES</span><b>.</b></h1>
         <p class="lede">专业硬件工具箱。检测、调校、烤机一站就绪。</p>
         <div class="actions">
           <a class="btn btn-main" id="downloadBtnCn" href="https://ghfast.top/https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.0/MOSES_Setup_v1.0.0.exe">国内加速下载</a>
