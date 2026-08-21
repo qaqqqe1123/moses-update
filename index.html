@@ -254,37 +254,49 @@
       animation: riseIn 1.15s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
     }
 
+    /* 图标与光环共用同一正方形坐标系，保证同心对齐 */
+    .hero-badge {
+      position: relative;
+      width: min(72%, 360px);
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      animation: floatY 6.2s ease-in-out infinite;
+    }
+
     .orb {
       position: absolute;
-      width: min(92%, 520px);
-      aspect-ratio: 1;
+      inset: -18%;
       border-radius: 50%;
       background:
-        radial-gradient(circle at 35% 30%, rgba(45, 212, 191, 0.12), transparent 45%),
-        radial-gradient(circle at 70% 70%, rgba(74, 112, 145, 0.18), transparent 50%);
+        radial-gradient(circle at 35% 30%, rgba(45, 212, 191, 0.14), transparent 48%),
+        radial-gradient(circle at 70% 70%, rgba(74, 112, 145, 0.2), transparent 52%);
       filter: blur(2px);
       animation: pulseOrb 6.5s ease-in-out infinite;
+      pointer-events: none;
     }
 
     .ring {
       position: absolute;
+      inset: 0;
+      margin: auto;
       border-radius: 50%;
-      border: 1px solid rgba(45, 212, 191, 0.14);
+      border: 1px solid rgba(45, 212, 191, 0.16);
       pointer-events: none;
+      box-sizing: border-box;
     }
     .ring-a {
-      width: min(88%, 460px);
-      aspect-ratio: 1;
+      inset: -10%;
       animation: spin 42s linear infinite;
     }
     .ring-b {
-      width: min(104%, 540px);
-      aspect-ratio: 1;
-      border-color: rgba(74, 112, 145, 0.2);
+      inset: -22%;
+      border-color: rgba(74, 112, 145, 0.22);
       border-style: dashed;
       animation: spin 68s linear infinite reverse;
     }
-    .ring-a i, .ring-b i {
+    .ring-a i,
+    .ring-b i {
       position: absolute;
       width: 8px;
       height: 8px;
@@ -292,6 +304,7 @@
       background: var(--teal);
       top: 0;
       left: 50%;
+      margin: 0;
       transform: translate(-50%, -50%);
       font-style: normal;
     }
@@ -299,19 +312,22 @@
       width: 6px;
       height: 6px;
       background: var(--steel);
-      top: auto;
-      bottom: 12%;
-      left: 14%;
-      transform: none;
+      top: 78%;
+      left: 12%;
+      transform: translate(-50%, -50%);
     }
 
-    .hero-visual img {
+    .hero-badge img {
       position: relative;
       z-index: 1;
-      width: min(78%, 380px);
-      border-radius: 32px;
-      filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.55));
-      animation: floatY 6.2s ease-in-out infinite;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      /* 图标本身已带圆角，不再额外裁切，避免边缘不规整 */
+      border-radius: 0;
+      filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.5));
     }
 
     .hero-rail {
@@ -562,9 +578,7 @@
       .cta-block, .cta-row { justify-items: center; justify-content: center; }
       .meta { justify-content: center; }
       .hero-visual { order: -1; min-height: 300px; }
-      .hero-visual img { width: min(58vw, 240px); border-radius: 24px; }
-      .ring-a { width: min(70vw, 280px); }
-      .ring-b { width: min(82vw, 330px); }
+      .hero-badge { width: min(58vw, 240px); }
       .feature-list li {
         grid-template-columns: 2.5rem 1fr;
         grid-template-rows: auto auto;
@@ -626,10 +640,12 @@
       </div>
 
       <div class="hero-visual" aria-hidden="true">
-        <div class="orb"></div>
-        <div class="ring ring-b"><i></i></div>
-        <div class="ring ring-a"><i></i></div>
-        <img src="moses.png" width="380" height="380" alt="" />
+        <div class="hero-badge">
+          <div class="orb"></div>
+          <div class="ring ring-b"><i></i></div>
+          <div class="ring ring-a"><i></i></div>
+          <img src="moses.png" width="360" height="360" alt="" />
+        </div>
       </div>
     </div>
 
@@ -723,7 +739,7 @@
       var toast = document.getElementById("toast");
       var toastTimer;
       wxBtn.addEventListener("click", function () {
-        var text = wxBtn.getAttribute("data-wx") || "aaocaaa";
+        var text = wxBtn.getAttribute("data-wx") || "MOSES";
         function show() {
           toast.classList.add("show");
           clearTimeout(toastTimer);
@@ -731,10 +747,10 @@
         }
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(text).then(show).catch(function () {
-            window.prompt("复制微信号", text);
+            window.prompt("复制抖音号", text);
           });
         } else {
-          window.prompt("复制微信号", text);
+          window.prompt("复制抖音号", text);
         }
       });
     })();
