@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "notes": "首发：启动密码验证；安装包优化；支持检查更新。",
-  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.0/MOSES_Setup_v1.0.0.exe",
-  "download_url_cn": "https://4275.com/bqtgku"
+  "version": "1.0.1",
+  "notes": "修复「进入 BIOS」权限错误 1314；自动 UAC 提权；不支持 /fw 时回退高级启动。",
+  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.1/MOSES_Setup_v1.0.1.exe",
+  "download_url_cn": "http://4275.com/24cy3l"
 }
