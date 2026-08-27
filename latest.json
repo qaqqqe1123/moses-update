@@ -1,6 +1,6 @@
 {
-  "version": "1.0.2",
-  "notes": "修复 AIDA64 Extreme OSD 排序错乱；隐藏多余传感器项。",
-  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.2/MOSES_Setup_v1.0.2.exe",
-  "download_url_cn": "http://4275.com/pjotml"
+  "version": "1.0.3",
+  "notes": "移除内置 AIDA64；安装向导品牌强化；MOSES与CKT超频工作室共同打造。",
+  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.3/MOSES_Setup_v1.0.3.exe",
+  "download_url_cn": "http://4275.com/hqouux"
 }
