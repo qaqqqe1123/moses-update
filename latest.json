@@ -1,6 +1,6 @@
 {
-  "version": "1.0.3",
-  "notes": "移除内置 AIDA64；安装向导品牌强化；MOSES与CKT超频工作室共同打造。",
-  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.3/MOSES_Setup_v1.0.3.exe",
-  "download_url_cn": "http://4275.com/hqouux"
+  "version": "1.0.4",
+  "notes": "修复浏览器下载后安装包提权失败（ShellExecuteEx 错误 5）；默认安装到用户目录，可选当前用户/所有用户。",
+  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.4/MOSES_Setup_v1.0.4.exe",
+  "download_url_cn": "http://4275.com/5excw3"
 }
