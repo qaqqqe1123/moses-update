@@ -1,6 +1,6 @@
 {
-  "version": "1.0.5",
-  "notes": "加回 AIDA64 Extreme（OSD 顺序已固定）；工具列表去掉简介；安装提权修复保留。",
-  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.5/MOSES_Setup_v1.0.5.exe",
-  "download_url_cn": "http://4275.com/pt3arb"
+  "version": "1.0.6",
+  "notes": "还原完整 AIDA64 OSD 配置；标题项关闭；安装提权修复保留；y-cruncher 升级至 0.8.7。",
+  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.6/MOSES_Setup_v1.0.6.exe",
+  "download_url_cn": "http://4275.com/vvghsp"
 }
