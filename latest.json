@@ -1,6 +1,6 @@
 {
-  "version": "1.0.8",
-  "notes": "Cat girl memoryOC 与 Zen Voltage Reader 已内置；压缩优化并剔除运行无关文件。",
-  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.8/MOSES_Setup_v1.0.8.exe",
+  "version": "1.0.9",
+  "notes": "界面品牌改为「工具箱」；Cinebench R15/循环启动自动联接桌面短路径；修复 bat 启动。",
+  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.9/MOSES_Setup_v1.0.9.exe",
   "download_url_cn": ""
 }
