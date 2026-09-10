@@ -1,6 +1,6 @@
 {
-  "version": "1.0.7",
-  "notes": "安装包控制在 200MB 内（适配 4275）；Cat girl memoryOC 改为首次启动自动下载（经虾壳/镜像加速）。",
-  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.7/MOSES_Setup_v1.0.7.exe",
+  "version": "1.0.8",
+  "notes": "Cat girl memoryOC 与 Zen Voltage Reader 已内置；压缩优化并剔除运行无关文件。",
+  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.8/MOSES_Setup_v1.0.8.exe",
   "download_url_cn": ""
 }
