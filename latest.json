@@ -1,6 +1,6 @@
 {
-  "version": "1.0.9",
-  "notes": "界面品牌改为「工具箱」；Cinebench R15/循环启动自动联接桌面短路径；修复 bat 启动。",
-  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.9/MOSES_Setup_v1.0.9.exe",
-  "download_url_cn": ""
+  "version": "1.0.6",
+  "notes": "精简体积至约 160MB；移除 Cinebench R23、MemTweakIt、AsrTC、CatgirlmemoryOC、ZenVoltageReader、DDR5英特尔。",
+  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.6/MOSES_Setup_v1.0.6.exe",
+  "download_url_cn": "http://4275.com/oitpki"
 }
