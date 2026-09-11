@@ -1,6 +1,6 @@
 {
-  "version": "1.0.6",
-  "notes": "精简体积至约 160MB；移除 Cinebench R23、MemTweakIt、AsrTC、CatgirlmemoryOC、ZenVoltageReader、DDR5英特尔。",
-  "download_url": "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.6/MOSES_Setup_v1.0.6.exe",
-  "download_url_cn": "http://4275.com/oitpki"
+  "version": "1.0.0",
+  "notes": "内存工具箱 1.0.0：CatgirlmemoryOC、Zen Voltage Reader、Mem TweakIt、AsrTC、MSI Dragon Ball、DDR5英特尔。",
+  "download_url": "http://4275.com/owmafy",
+  "download_url_cn": "http://4275.com/owmafy"
 }
