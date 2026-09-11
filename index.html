@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>内存工具箱 - MOSES × CKT超频工作室</title>
+    <title>MOSES × CKT — 工具箱 / 内存工具箱</title>
     <script type="module" crossorigin>(function(){const _=document.createElement("link").relList;if(_&&_.supports&&_.supports("modulepreload"))return;for(const R of document.querySelectorAll('link[rel="modulepreload"]'))h(R);new MutationObserver(R=>{for(const Z of R)if(Z.type==="childList")for(const rl of Z.addedNodes)rl.tagName==="LINK"&&rl.rel==="modulepreload"&&h(rl)}).observe(document,{childList:!0,subtree:!0});function M(R){const Z={};return R.integrity&&(Z.integrity=R.integrity),R.referrerPolicy&&(Z.referrerPolicy=R.referrerPolicy),R.crossOrigin==="use-credentials"?Z.credentials="include":R.crossOrigin==="anonymous"?Z.credentials="omit":Z.credentials="same-origin",Z}function h(R){if(R.ep)return;R.ep=!0;const Z=M(R);fetch(R.href,Z)}})();var df={exports:{}},Su={};var po;function d1(){if(po)return Su;po=1;var A=Symbol.for("react.transitional.element"),_=Symbol.for("react.fragment");function M(h,R,Z){var rl=null;if(Z!==void 0&&(rl=""+Z),R.key!==void 0&&(rl=""+R.key),"key"in R){Z={};for(var El in R)El!=="key"&&(Z[El]=R[El])}else Z=R;return R=Z.ref,{$$typeof:A,type:h,key:rl,ref:R!==void 0?R:null,props:Z}}return Su.Fragment=_,Su.jsx=M,Su.jsxs=M,Su}var zo;function o1(){return zo||(zo=1,df.exports=d1()),df.exports}var f=o1(),of={exports:{}},Y={};var No;function m1(){if(No)return Y;No=1;var A=Symbol.for("react.transitional.element"),_=Symbol.for("react.portal"),M=Symbol.for("react.fragment"),h=Symbol.for("react.strict_mode"),R=Symbol.for("react.profiler"),Z=Symbol.for("react.consumer"),rl=Symbol.for("react.context"),El=Symbol.for("react.forward_ref"),U=Symbol.for("react.suspense"),N=Symbol.for("react.memo"),W=Symbol.for("react.lazy"),q=Symbol.for("react.activity"),sl=Symbol.iterator;function Bl(o){return o===null||typeof o!="object"?null:(o=sl&&o[sl]||o["@@iterator"],typeof o=="function"?o:null)}var Hl={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},jl=Object.assign,bt={};function Wl(o,z,T){this.props=o,this.context=z,this.refs=bt,this.updater=T||Hl}Wl.prototype.isReactComponent={},Wl.prototype.setState=function(o,z){if(typeof o!="object"&&typeof o!="function"&&o!=null)throw Error("takes an object of state variables to update or a function which returns an object of state variables.");this.updater.enqueueSetState(this,o,z,"setState")},Wl.prototype.forceUpdate=function(o){this.updater.enqueueForceUpdate(this,o,"forceUpdate")};function Wt(){}Wt.prototype=Wl.prototype;function Rl(o,z,T){this.props=o,this.context=z,this.refs=bt,this.updater=T||Hl}var it=Rl.prototype=new Wt;it.constructor=Rl,jl(it,Wl.prototype),it.isPureReactComponent=!0;var At=Array.isArray;function Xl(){}var k={H:null,A:null,T:null,S:null},Ql=Object.prototype.hasOwnProperty;function Et(o,z,T){var O=T.ref;return{$$typeof:A,type:o,key:z,ref:O!==void 0?O:null,props:T}}function Za(o,z){return Et(o.type,z,o.props)}function Tt(o){return typeof o=="object"&&o!==null&&o.$$typeof===A}function Zl(o){var z={"=":"=0",":":"=2"};return"$"+o.replace(/[=:]/g,function(T){return z[T]})}var za=/\/+/g;function Dt(o,z){return typeof o=="object"&&o!==null&&o.key!=null?Zl(""+o.key):z.toString(36)}function St(o){switch(o.status){case"fulfilled":return o.value;case"rejected":throw o.reason;default:switch(typeof o.status=="string"?o.then(Xl,Xl):(o.status="pending",o.then(function(z){o.status==="pending"&&(o.status="fulfilled",o.value=z)},function(z){o.status==="pending"&&(o.status="rejected",o.reason=z)})),o.status){case"fulfilled":return o.value;case"rejected":throw o.reason}}throw o}function b(o,z,T,O,G){var V=typeof o;(V==="undefined"||V==="boolean")&&(o=null);var ll=!1;if(o===null)ll=!0;else switch(V){case"bigint":case"string":case"number":ll=!0;break;case"object":switch(o.$$typeof){case A:case _:ll=!0;break;case W:return ll=o._init,b(ll(o._payload),z,T,O,G)}}if(ll)return G=G(o),ll=O===""?"."+Dt(o,0):O,At(G)?(T="",ll!=null&&(T=ll.replace(za,"$&/")+"/"),b(G,z,T,"",function(_e){return _e})):G!=null&&(Tt(G)&&(G=Za(G,T+(G.key==null||o&&o.key===G.key?"":(""+G.key).replace(za,"$&/")+"/")+ll)),z.push(G)),1;ll=0;var Yl=O===""?".":O+":";if(At(o))for(var gl=0;gl<o.length;gl++)O=o[gl],V=Yl+Dt(O,gl),ll+=b(O,z,T,V,G);else if(gl=Bl(o),typeof gl=="function")for(o=gl.call(o),gl=0;!(O=o.next()).done;)O=O.value,V=Yl+Dt(O,gl++),ll+=b(O,z,T,V,G);else if(V==="object"){if(typeof o.then=="function")return b(St(o),z,T,O,G);throw z=String(o),Error("Objects are not valid as a React child (found: "+(z==="[object Object]"?"object with keys {"+Object.keys(o).join(", ")+"}":z)+"). If you meant to render a collection of children, use an array instead.")}return ll}function E(o,z,T){if(o==null)return o;var O=[],G=0;return b(o,O,"","",function(V){return z.call(T,V,G++)}),O}function B(o){if(o._status===-1){var z=o._result;z=z(),z.then(function(T){(o._status===0||o._status===-1)&&(o._status=1,o._result=T)},function(T){(o._status===0||o._status===-1)&&(o._status=2,o._result=T)}),o._status===-1&&(o._status=0,o._result=z)}if(o._status===1)return o._result.default;throw o._result}var el=typeof reportError=="function"?reportError:function(o){if(typeof window=="object"&&typeof window.ErrorEvent=="function"){var z=new window.ErrorEvent("error",{bubbles:!0,cancelable:!0,message:typeof o=="object"&&o!==null&&typeof o.message=="string"?String(o.message):String(o),error:o});if(!window.dispatchEvent(z))return}else if(typeof process=="object"&&typeof process.emit=="function"){process.emit("uncaughtException",o);return}console.error(o)},il={map:E,forEach:function(o,z,T){E(o,function(){z.apply(this,arguments)},T)},count:function(o){var z=0;return E(o,function(){z++}),z},toArray:function(o){return E(o,function(z){return z})||[]},only:function(o){if(!Tt(o))throw Error("React.Children.only expected to receive a single React element child.");return o}};return Y.Activity=q,Y.Children=il,Y.Component=Wl,Y.Fragment=M,Y.Profiler=R,Y.PureComponent=Rl,Y.StrictMode=h,Y.Suspense=U,Y.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE=k,Y.__COMPILER_RUNTIME={__proto__:null,c:function(o){return k.H.useMemoCache(o)}},Y.cache=function(o){return function(){return o.apply(null,arguments)}},Y.cacheSignal=function(){return null},Y.cloneElement=function(o,z,T){if(o==null)throw Error("The argument must be a React element, but you passed "+o+".");var O=jl({},o.props),G=o.key;if(z!=null)for(V in z.key!==void 0&&(G=""+z.key),z)!Ql.call(z,V)||V==="key"||V==="__self"||V==="__source"||V==="ref"&&z.ref===void 0||(O[V]=z[V]);var V=arguments.length-2;if(V===1)O.children=T;else if(1<V){for(var ll=Array(V),Yl=0;Yl<V;Yl++)ll[Yl]=arguments[Yl+2];O.children=ll}return Et(o.type,G,O)},Y.createContext=function(o){return o={$$typeof:rl,_currentValue:o,_currentValue2:o,_threadCount:0,Provider:null,Consumer:null},o.Provider=o,o.Consumer={$$typeof:Z,_context:o},o},Y.createElement=function(o,z,T){var O,G={},V=null;if(z!=null)for(O in z.key!==void 0&&(V=""+z.key),z)Ql.call(z,O)&&O!=="key"&&O!=="__self"&&O!=="__source"&&(G[O]=z[O]);var ll=arguments.length-2;if(ll===1)G.children=T;else if(1<ll){for(var Yl=Array(ll),gl=0;gl<ll;gl++)Yl[gl]=arguments[gl+2];G.children=Yl}if(o&&o.defaultProps)for(O in ll=o.defaultProps,ll)G[O]===void 0&&(G[O]=ll[O]);return Et(o,V,G)},Y.createRef=function(){return{current:null}},Y.forwardRef=function(o){return{$$typeof:El,render:o}},Y.isValidElement=Tt,Y.lazy=function(o){return{$$typeof:W,_payload:{_status:-1,_result:o},_init:B}},Y.memo=function(o,z){return{$$typeof:N,type:o,compare:z===void 0?null:z}},Y.startTransition=function(o){var z=k.T,T={};k.T=T;try{var O=o(),G=k.S;G!==null&&G(T,O),typeof O=="object"&&O!==null&&typeof O.then=="function"&&O.then(Xl,el)}catch(V){el(V)}finally{z!==null&&T.types!==null&&(z.types=T.types),k.T=z}},Y.unstable_useCacheRefresh=function(){return k.H.useCacheRefresh()},Y.use=function(o){return k.H.use(o)},Y.useActionState=function(o,z,T){return k.H.useActionState(o,z,T)},Y.useCallback=function(o,z){return k.H.useCallback(o,z)},Y.useContext=function(o){return k.H.useContext(o)},Y.useDebugValue=function(){},Y.useDeferredValue=function(o,z){return k.H.useDeferredValue(o,z)},Y.useEffect=function(o,z){return k.H.useEffect(o,z)},Y.useEffectEvent=function(o){return k.H.useEffectEvent(o)},Y.useId=function(){return k.H.useId()},Y.useImperativeHandle=function(o,z,T){return k.H.useImperativeHandle(o,z,T)},Y.useInsertionEffect=function(o,z){return k.H.useInsertionEffect(o,z)},Y.useLayoutEffect=function(o,z){return k.H.useLayoutEffect(o,z)},Y.useMemo=function(o,z){return k.H.useMemo(o,z)},Y.useOptimistic=function(o,z){return k.H.useOptimistic(o,z)},Y.useReducer=function(o,z,T){return k.H.useReducer(o,z,T)},Y.useRef=function(o){return k.H.useRef(o)},Y.useState=function(o){return k.H.useState(o)},Y.useSyncExternalStore=function(o,z,T){return k.H.useSyncExternalStore(o,z,T)},Y.useTransition=function(){return k.H.useTransition()},Y.version="19.2.6",Y}var Ao;function gf(){return Ao||(Ao=1,of.exports=m1()),of.exports}var xt=gf(),mf={exports:{}},pu={},hf={exports:{}},rf={};var Eo;function h1(){return Eo||(Eo=1,(function(A){function _(b,E){var B=b.length;b.push(E);l:for(;0<B;){var el=B-1>>>1,il=b[el];if(0<R(il,E))b[el]=E,b[B]=il,B=el;else break l}}function M(b){return b.length===0?null:b[0]}function h(b){if(b.length===0)return null;var E=b[0],B=b.pop();if(B!==E){b[0]=B;l:for(var el=0,il=b.length,o=il>>>1;el<o;){var z=2*(el+1)-1,T=b[z],O=z+1,G=b[O];if(0>R(T,B))O<il&&0>R(G,T)?(b[el]=G,b[O]=B,el=O):(b[el]=T,b[z]=B,el=z);else if(O<il&&0>R(G,B))b[el]=G,b[O]=B,el=O;else break l}}return E}function R(b,E){var B=b.sortIndex-E.sortIndex;return B!==0?B:b.id-E.id}if(A.unstable_now=void 0,typeof performance=="object"&&typeof performance.now=="function"){var Z=performance;A.unstable_now=function(){return Z.now()}}else{var rl=Date,El=rl.now();A.unstable_now=function(){return rl.now()-El}}var U=[],N=[],W=1,q=null,sl=3,Bl=!1,Hl=!1,jl=!1,bt=!1,Wl=typeof setTimeout=="function"?setTimeout:null,Wt=typeof clearTimeout=="function"?clearTimeout:null,Rl=typeof setImmediate<"u"?setImmediate:null;function it(b){for(var E=M(N);E!==null;){if(E.callback===null)h(N);else if(E.startTime<=b)h(N),E.sortIndex=E.expirationTime,_(U,E);else break;E=M(N)}}function At(b){if(jl=!1,it(b),!Hl)if(M(U)!==null)Hl=!0,Xl||(Xl=!0,Zl());else{var E=M(N);E!==null&&St(At,E.startTime-b)}}var Xl=!1,k=-1,Ql=5,Et=-1;function Za(){return bt?!0:!(A.unstable_now()-Et<Ql)}function Tt(){if(bt=!1,Xl){var b=A.unstable_now();Et=b;var E=!0;try{l:{Hl=!1,jl&&(jl=!1,Wt(k),k=-1),Bl=!0;var B=sl;try{t:{for(it(b),q=M(U);q!==null&&!(q.expirationTime>b&&Za());){var el=q.callback;if(typeof el=="function"){q.callback=null,sl=q.priorityLevel;var il=el(q.expirationTime<=b);if(b=A.unstable_now(),typeof il=="function"){q.callback=il,it(b),E=!0;break t}q===M(U)&&h(U),it(b)}else h(U);q=M(U)}if(q!==null)E=!0;else{var o=M(N);o!==null&&St(At,o.startTime-b),E=!1}}break l}finally{q=null,sl=B,Bl=!1}E=void 0}}finally{E?Zl():Xl=!1}}}var Zl;if(typeof Rl=="function")Zl=function(){Rl(Tt)};else if(typeof MessageChannel<"u"){var za=new MessageChannel,Dt=za.port2;za.port1.onmessage=Tt,Zl=function(){Dt.postMessage(null)}}else Zl=function(){Wl(Tt,0)};function St(b,E){k=Wl(function(){b(A.unstable_now())},E)}A.unstable_IdlePriority=5,A.unstable_ImmediatePriority=1,A.unstable_LowPriority=4,A.unstable_NormalPriority=3,A.unstable_Profiling=null,A.unstable_UserBlockingPriority=2,A.unstable_cancelCallback=function(b){b.callback=null},A.unstable_forceFrameRate=function(b){0>b||125<b?console.error("forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported"):Ql=0<b?Math.floor(1e3/b):5},A.unstable_getCurrentPriorityLevel=function(){return sl},A.unstable_next=function(b){switch(sl){case 1:case 2:case 3:var E=3;break;default:E=sl}var B=sl;sl=E;try{return b()}finally{sl=B}},A.unstable_requestPaint=function(){bt=!0},A.unstable_runWithPriority=function(b,E){switch(b){case 1:case 2:case 3:case 4:case 5:break;default:b=3}var B=sl;sl=b;try{return E()}finally{sl=B}},A.unstable_scheduleCallback=function(b,E,B){var el=A.unstable_now();switch(typeof B=="object"&&B!==null?(B=B.delay,B=typeof B=="number"&&0<B?el+B:el):B=el,b){case 1:var il=-1;break;case 2:il=250;break;case 5:il=1073741823;break;case 4:il=1e4;break;default:il=5e3}return il=B+il,b={id:W++,callback:E,priorityLevel:b,startTime:B,expirationTime:il,sortIndex:-1},B>el?(b.sortIndex=B,_(N,b),M(U)===null&&b===M(N)&&(jl?(Wt(k),k=-1):jl=!0,St(At,B-el))):(b.sortIndex=il,_(U,b),Hl||Bl||(Hl=!0,Xl||(Xl=!0,Zl()))),b},A.unstable_shouldYield=Za,A.unstable_wrapCallback=function(b){var E=sl;return function(){var B=sl;sl=E;try{return b.apply(this,arguments)}finally{sl=B}}}})(rf)),rf}var To;function r1(){return To||(To=1,hf.exports=h1()),hf.exports}var yf={exports:{}},ql={};var _o;function y1(){if(_o)return ql;_o=1;var A=gf();function _(U){var N="https://react.dev/errors/"+U;if(1<arguments.length){N+="?args[]="+encodeURIComponent(arguments[1]);for(var W=2;W<arguments.length;W++)N+="&args[]="+encodeURIComponent(arguments[W])}return"Minified React error #"+U+"; visit "+N+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}function M(){}var h={d:{f:M,r:function(){throw Error(_(522))},D:M,C:M,L:M,m:M,X:M,S:M,M},p:0,findDOMNode:null},R=Symbol.for("react.portal");function Z(U,N,W){var q=3<arguments.length&&arguments[3]!==void 0?arguments[3]:null;return{$$typeof:R,key:q==null?null:""+q,children:U,containerInfo:N,implementation:W}}var rl=A.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;function El(U,N){if(U==="font")return"";if(typeof N=="string")return N==="use-credentials"?N:""}return ql.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE=h,ql.createPortal=function(U,N){var W=2<arguments.length&&arguments[2]!==void 0?arguments[2]:null;if(!N||N.nodeType!==1&&N.nodeType!==9&&N.nodeType!==11)throw Error(_(299));return Z(U,N,null,W)},ql.flushSync=function(U){var N=rl.T,W=h.p;try{if(rl.T=null,h.p=2,U)return U()}finally{rl.T=N,h.p=W,h.d.f()}},ql.preconnect=function(U,N){typeof U=="string"&&(N?(N=N.crossOrigin,N=typeof N=="string"?N==="use-credentials"?N:"":void 0):N=null,h.d.C(U,N))},ql.prefetchDNS=function(U){typeof U=="string"&&h.d.D(U)},ql.preinit=function(U,N){if(typeof U=="string"&&N&&typeof N.as=="string"){var W=N.as,q=El(W,N.crossOrigin),sl=typeof N.integrity=="string"?N.integrity:void 0,Bl=typeof N.fetchPriority=="string"?N.fetchPriority:void 0;W==="style"?h.d.S(U,typeof N.precedence=="string"?N.precedence:void 0,{crossOrigin:q,integrity:sl,fetchPriority:Bl}):W==="script"&&h.d.X(U,{crossOrigin:q,integrity:sl,fetchPriority:Bl,nonce:typeof N.nonce=="string"?N.nonce:void 0})}},ql.preinitModule=function(U,N){if(typeof U=="string")if(typeof N=="object"&&N!==null){if(N.as==null||N.as==="script"){var W=El(N.as,N.crossOrigin);h.d.M(U,{crossOrigin:W,integrity:typeof N.integrity=="string"?N.integrity:void 0,nonce:typeof N.nonce=="string"?N.nonce:void 0})}}else N==null&&h.d.M(U)},ql.preload=function(U,N){if(typeof U=="string"&&typeof N=="object"&&N!==null&&typeof N.as=="string"){var W=N.as,q=El(W,N.crossOrigin);h.d.L(U,W,{crossOrigin:q,integrity:typeof N.integrity=="string"?N.integrity:void 0,nonce:typeof N.nonce=="string"?N.nonce:void 0,type:typeof N.type=="string"?N.type:void 0,fetchPriority:typeof N.fetchPriority=="string"?N.fetchPriority:void 0,referrerPolicy:typeof N.referrerPolicy=="string"?N.referrerPolicy:void 0,imageSrcSet:typeof N.imageSrcSet=="string"?N.imageSrcSet:void 0,imageSizes:typeof N.imageSizes=="string"?N.imageSizes:void 0,media:typeof N.media=="string"?N.media:void 0})}},ql.preloadModule=function(U,N){if(typeof U=="string")if(N){var W=El(N.as,N.crossOrigin);h.d.m(U,{as:typeof N.as=="string"&&N.as!=="script"?N.as:void 0,crossOrigin:W,integrity:typeof N.integrity=="string"?N.integrity:void 0})}else h.d.m(U)},ql.requestFormReset=function(U){h.d.r(U)},ql.unstable_batchedUpdates=function(U,N){return U(N)},ql.useFormState=function(U,N,W){return rl.H.useFormState(U,N,W)},ql.useFormStatus=function(){return rl.H.useHostTransitionStatus()},ql.version="19.2.6",ql}var jo;function v1(){if(jo)return yf.exports;jo=1;function A(){if(!(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__>"u"||typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE!="function"))try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(A)}catch(_){console.error(_)}}return A(),yf.exports=y1(),yf.exports}var Mo;function g1(){if(Mo)return pu;Mo=1;var A=r1(),_=gf(),M=v1();function h(l){var t="https://react.dev/errors/"+l;if(1<arguments.length){t+="?args[]="+encodeURIComponent(arguments[1]);for(var a=2;a<arguments.length;a++)t+="&args[]="+encodeURIComponent(arguments[a])}return"Minified React error #"+l+"; visit "+t+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}function R(l){return!(!l||l.nodeType!==1&&l.nodeType!==9&&l.nodeType!==11)}function Z(l){var t=l,a=l;if(l.alternate)for(;t.return;)t=t.return;else{l=t;do t=l,(t.flags&4098)!==0&&(a=t.return),l=t.return;while(l)}return t.tag===3?a:null}function rl(l){if(l.tag===13){var t=l.memoizedState;if(t===null&&(l=l.alternate,l!==null&&(t=l.memoizedState)),t!==null)return t.dehydrated}return null}function El(l){if(l.tag===31){var t=l.memoizedState;if(t===null&&(l=l.alternate,l!==null&&(t=l.memoizedState)),t!==null)return t.dehydrated}return null}function U(l){if(Z(l)!==l)throw Error(h(188))}function N(l){var t=l.alternate;if(!t){if(t=Z(l),t===null)throw Error(h(188));return t!==l?null:l}for(var a=l,e=t;;){var u=a.return;if(u===null)break;var n=u.alternate;if(n===null){if(e=u.return,e!==null){a=e;continue}break}if(u.child===n.child){for(n=u.child;n;){if(n===a)return U(u),l;if(n===e)return U(u),t;n=n.sibling}throw Error(h(188))}if(a.return!==e.return)a=u,e=n;else{for(var c=!1,i=u.child;i;){if(i===a){c=!0,a=u,e=n;break}if(i===e){c=!0,e=u,a=n;break}i=i.sibling}if(!c){for(i=n.child;i;){if(i===a){c=!0,a=n,e=u;break}if(i===e){c=!0,e=n,a=u;break}i=i.sibling}if(!c)throw Error(h(189))}}if(a.alternate!==e)throw Error(h(190))}if(a.tag!==3)throw Error(h(188));return a.stateNode.current===a?l:t}function W(l){var t=l.tag;if(t===5||t===26||t===27||t===6)return l;for(l=l.child;l!==null;){if(t=W(l),t!==null)return t;l=l.sibling}return null}var q=Object.assign,sl=Symbol.for("react.element"),Bl=Symbol.for("react.transitional.element"),Hl=Symbol.for("react.portal"),jl=Symbol.for("react.fragment"),bt=Symbol.for("react.strict_mode"),Wl=Symbol.for("react.profiler"),Wt=Symbol.for("react.consumer"),Rl=Symbol.for("react.context"),it=Symbol.for("react.forward_ref"),At=Symbol.for("react.suspense"),Xl=Symbol.for("react.suspense_list"),k=Symbol.for("react.memo"),Ql=Symbol.for("react.lazy"),Et=Symbol.for("react.activity"),Za=Symbol.for("react.memo_cache_sentinel"),Tt=Symbol.iterator;function Zl(l){return l===null||typeof l!="object"?null:(l=Tt&&l[Tt]||l["@@iterator"],typeof l=="function"?l:null)}var za=Symbol.for("react.client.reference");function Dt(l){if(l==null)return null;if(typeof l=="function")return l.$$typeof===za?null:l.displayName||l.name||null;if(typeof l=="string")return l;switch(l){case jl:return"Fragment";case Wl:return"Profiler";case bt:return"StrictMode";case At:return"Suspense";case Xl:return"SuspenseList";case Et:return"Activity"}if(typeof l=="object")switch(l.$$typeof){case Hl:return"Portal";case Rl:return l.displayName||"Context";case Wt:return(l._context.displayName||"Context")+".Consumer";case it:var t=l.render;return l=l.displayName,l||(l=t.displayName||t.name||"",l=l!==""?"ForwardRef("+l+")":"ForwardRef"),l;case k:return t=l.displayName||null,t!==null?t:Dt(l.type)||"Memo";case Ql:t=l._payload,l=l._init;try{return Dt(l(t))}catch{}}return null}var St=Array.isArray,b=_.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,E=M.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,B={pending:!1,data:null,method:null,action:null},el=[],il=-1;function o(l){return{current:l}}function z(l){0>il||(l.current=el[il],el[il]=null,il--)}function T(l,t){il++,el[il]=l.current,l.current=t}var O=o(null),G=o(null),V=o(null),ll=o(null);function Yl(l,t){switch(T(V,t),T(G,l),T(O,null),t.nodeType){case 9:case 11:l=(l=t.documentElement)&&(l=l.namespaceURI)?Vd(l):0;break;default:if(l=t.tagName,t=t.namespaceURI)t=Vd(t),l=Ld(t,l);else switch(l){case"svg":l=1;break;case"math":l=2;break;default:l=0}}z(O),T(O,l)}function gl(){z(O),z(G),z(V)}function _e(l){l.memoizedState!==null&&T(ll,l);var t=O.current,a=Ld(t,l.type);t!==a&&(T(G,l),T(O,a))}function Tu(l){G.current===l&&(z(O),z(G)),ll.current===l&&(z(ll),vu._currentValue=B)}var Kn,bf;function Na(l){if(Kn===void 0)try{throw Error()}catch(a){var t=a.stack.trim().match(/\n( *(at )?)/);Kn=t&&t[1]||"",bf=-1<a.stack.indexOf(`
     at`)?" (<anonymous>)":-1<a.stack.indexOf("@")?"@unknown:0:0":""}return`
 `+Kn+l+bf}var Jn=!1;function wn(l,t){if(!l||Jn)return"";Jn=!0;var a=Error.prepareStackTrace;Error.prepareStackTrace=void 0;try{var e={DetermineComponentFrameRoot:function(){try{if(t){var p=function(){throw Error()};if(Object.defineProperty(p.prototype,"props",{set:function(){throw Error()}}),typeof Reflect=="object"&&Reflect.construct){try{Reflect.construct(p,[])}catch(g){var v=g}Reflect.construct(l,[],p)}else{try{p.call()}catch(g){v=g}l.call(p.prototype)}}else{try{throw Error()}catch(g){v=g}(p=l())&&typeof p.catch=="function"&&p.catch(function(){})}}catch(g){if(g&&v&&typeof g.stack=="string")return[g.stack,v.stack]}return[null,null]}};e.DetermineComponentFrameRoot.displayName="DetermineComponentFrameRoot";var u=Object.getOwnPropertyDescriptor(e.DetermineComponentFrameRoot,"name");u&&u.configurable&&Object.defineProperty(e.DetermineComponentFrameRoot,"name",{value:"DetermineComponentFrameRoot"});var n=e.DetermineComponentFrameRoot(),c=n[0],i=n[1];if(c&&i){var s=c.split(`
@@ -23,77 +23,89 @@ Error generating stack: `+e.message+`
 
 <script>
 (function(){
-  var GH = "http://4275.com/owmafy";
-  var MIRRORS = [
-    "https://gh.llkk.cc",
-    "https://gh-proxy.com",
-    "https://ghfast.top",
-    "https://ghproxy.net",
-    "https://mirror.ghproxy.com",
-    "https://ghproxy.cn",
-    "https://cf.ghproxy.cc"
+  var PRODUCTS = [
+    {
+      id: "toolbox",
+      name: "工具箱",
+      badge: "综合工具",
+      desc: "CPU / 信息检测 / 压测 / AMD 调校等常用工具集合",
+      version: "v1.0.6",
+      url: "http://4275.com/bpgkfs"
+    },
+    {
+      id: "mem",
+      name: "内存工具箱",
+      badge: "内存调校",
+      desc: "内存超频与时序相关专用工具",
+      version: "v1.0.0",
+      url: "http://4275.com/owmafy"
+    }
   ];
-  function proxyOf(u, host){
-    return host.replace(/\/$/,"") + "/https://" + String(u).replace(/^https?:\/\//,"");
+
+  function card(p){
+    return (
+      '<a href="' + p.url + '" target="_blank" rel="noopener" class="moses-dl-card" style="display:block;text-decoration:none;color:inherit;border:1px solid #2dd4bf;border-radius:1rem;padding:1.25rem 1.35rem;background:rgba(45,212,191,.08);">' +
+        '<div style="display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:.55rem">' +
+          '<div style="font-size:1.2rem;font-weight:800;color:#f8fafc">' + p.name + '</div>' +
+          '<span style="font-size:.72rem;font-weight:700;letter-spacing:.04em;padding:.2rem .55rem;border-radius:999px;background:#2dd4bf;color:#04201b">' + p.badge + '</span>' +
+        '</div>' +
+        '<div style="color:#94a3b8;font-size:.9rem;line-height:1.5;margin-bottom:.9rem">' + p.desc + '</div>' +
+        '<div style="display:flex;align-items:center;justify-content:space-between;gap:.75rem">' +
+          '<span style="color:#64748b;font-size:.8rem">' + p.version + ' · 优先 4275 直链</span>' +
+          '<span style="color:#2dd4bf;font-weight:700;font-size:.9rem">立即下载 →</span>' +
+        '</div>' +
+      '</a>'
+    );
   }
-  function hostLabel(host){
-    try { return new URL(host).host; } catch(e){ return host; }
+
+  function mount(products){
+    var old = document.getElementById("moses-product-cards");
+    if (old) old.remove();
+    var box = document.createElement("div");
+    box.id = "moses-product-cards";
+    box.style.cssText = "max-width:72rem;margin:1.25rem auto 2rem;padding:0 1.25rem;position:relative;z-index:50;";
+    box.innerHTML =
+      '<div style="text-align:center;margin-bottom:1rem">' +
+        '<div style="color:#2dd4bf;font-size:.75rem;font-weight:700;letter-spacing:.14em">MOSES × CKT超频工作室</div>' +
+        '<h2 style="margin:.4rem 0 .35rem;color:#f8fafc;font-size:1.5rem;font-weight:800">选择要下载的工具箱</h2>' +
+        '<p style="margin:0;color:#94a3b8;font-size:.92rem">优先 4275 国内直链 · 打开即可下载</p>' +
+      '</div>' +
+      '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem">' +
+        card(products[0]) + card(products[1]) +
+      '</div>';
+    var host = document.getElementById("download");
+    if (host) host.insertBefore(box, host.firstChild);
+    else {
+      var root = document.getElementById("root");
+      if (root) document.body.insertBefore(box, root);
+      else document.body.appendChild(box);
+    }
   }
-  function ensurePanel(section){
-    var box = document.getElementById("moses-mirror-panel");
-    if (box) return box;
-    box = document.createElement("div");
-    box.id = "moses-mirror-panel";
-    box.style.cssText = "max-width:72rem;margin:0 auto 3rem;padding:0 1.25rem;";
-    box.innerHTML = "<div style=\"color:#94a3b8;font-size:.85rem;font-weight:600;margin:0 0 .65rem\">GitHub 下载镜像（任选一个，主镜像不通可换备用）</div><div id=\"moses-mirror-list\" style=\"display:flex;flex-wrap:wrap;gap:.45rem\"></div>";
-    var wrap = section.querySelector(".max-w-6xl, .max-w-5xl") || section;
-    wrap.appendChild(box);
-    return box;
-  }
-  function fillMirrors(ghUrl){
-    var list = document.getElementById("moses-mirror-list");
-    if(!list) return;
-    list.innerHTML = "";
-    MIRRORS.forEach(function(host, i){
-      var a = document.createElement("a");
-      a.href = proxyOf(ghUrl, host);
-      a.target = "_blank";
-      a.rel = "noopener";
-      a.textContent = hostLabel(host);
-      a.style.cssText = i===0
-        ? "display:inline-flex;align-items:center;padding:.35rem .75rem;border-radius:.35rem;font-size:.8rem;font-weight:700;text-decoration:none;background:#2dd4bf;color:#04201b;border:1px solid #2dd4bf"
-        : "display:inline-flex;align-items:center;padding:.35rem .75rem;border-radius:.35rem;font-size:.8rem;font-weight:600;text-decoration:none;background:transparent;color:#cbd5e1;border:1px solid #334155";
-      list.appendChild(a);
-    });
-  }
+
   async function refresh(){
-    try{
-      var j = await fetch("/latest.json", {cache:"no-store"}).then(function(r){return r.json()});
-      if (j && j.download_url) GH = j.download_url;
-    }catch(e){}
-    var section = document.getElementById("download");
-    if(!section) return;
-    var links = Array.prototype.slice.call(section.querySelectorAll("a.glass-card[href], a[href*='MOSES_Setup'], a[href*='github.com'], a[href*='gh.']"));
-    if(links.length < 3){
-      links = Array.prototype.slice.call(section.querySelectorAll("a[href]")).filter(function(a){
-        return /MOSES_Setup|github\.com|gh\.|proxy/i.test(a.href);
-      });
-    }
-    if(links.length >= 1){
-      var ghLink = links[links.length-1];
-      var primary = links[0];
-      var secondary = links.length > 2 ? links[1] : null;
-      ghLink.href = GH;
-      primary.href = proxyOf(GH, MIRRORS[0]);
-      if(secondary) secondary.href = proxyOf(GH, MIRRORS[1]);
-    }
-    ensurePanel(section);
-    fillMirrors(GH);
+    var products = PRODUCTS.slice();
+    try {
+      var j = await fetch("/latest.json", {cache:"no-store"}).then(function(r){return r.json();});
+      if (j && Array.isArray(j.products) && j.products.length >= 2) {
+        products = j.products.slice(0, 2).map(function(p, i){
+          var fb = PRODUCTS[i] || {};
+          return {
+            id: p.id || fb.id,
+            name: p.name || fb.name,
+            badge: p.badge || fb.badge,
+            desc: p.desc || fb.desc,
+            version: p.version ? ("v" + String(p.version).replace(/^v/i,"")) : fb.version,
+            url: p.download_url_cn || p.download_url || fb.url
+          };
+        });
+      }
+    } catch (e) {}
+    mount(products);
   }
-  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", refresh);
-  else setTimeout(refresh, 800);
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", refresh);
+  else setTimeout(refresh, 150);
 })();
 </script>
-
 </body>
 </html>

@@ -1,6 +1,26 @@
 {
   "version": "1.0.0",
-  "notes": "内存工具箱 1.0.0：CatgirlmemoryOC、Zen Voltage Reader、Mem TweakIt、AsrTC、MSI Dragon Ball、DDR5英特尔。",
+  "notes": "官网提供「工具箱」与「内存工具箱」两个下载入口，优先 4275 直链。",
   "download_url": "http://4275.com/owmafy",
-  "download_url_cn": "http://4275.com/owmafy"
+  "download_url_cn": "http://4275.com/owmafy",
+  "products": [
+    {
+      "id": "toolbox",
+      "name": "工具箱",
+      "badge": "综合工具",
+      "desc": "CPU / 信息检测 / 压测 / AMD 调校等常用工具集合",
+      "version": "1.0.6",
+      "download_url": "http://4275.com/bpgkfs",
+      "download_url_cn": "http://4275.com/bpgkfs"
+    },
+    {
+      "id": "mem",
+      "name": "内存工具箱",
+      "badge": "内存调校",
+      "desc": "内存超频与时序相关专用工具（Catgirl / MemTweak / AsrTC / Dragon Ball 等）",
+      "version": "1.0.0",
+      "download_url": "http://4275.com/owmafy",
+      "download_url_cn": "http://4275.com/owmafy"
+    }
+  ]
 }
