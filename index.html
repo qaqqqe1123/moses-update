@@ -20,12 +20,51 @@ Error generating stack: `+e.message+`
   
 
 
+
 <script>
 (function(){
   var GH = "https://github.com/qaqqqe1123/moses-update/releases/download/v1.0.9/MOSES_Setup_v1.0.9.exe";
-  var CONVERT = "https://git.mxg.pub/api/github/convert?url=";
+  var MIRRORS = [
+    "https://gh.llkk.cc",
+    "https://gh-proxy.com",
+    "https://ghfast.top",
+    "https://ghproxy.net",
+    "https://mirror.ghproxy.com",
+    "https://ghproxy.cn",
+    "https://cf.ghproxy.cc"
+  ];
   function proxyOf(u, host){
-    return host.replace(/\/$/,"") + "/https://" + u.replace(/^https?:\/\//,"");
+    return host.replace(/\/$/,"") + "/https://" + String(u).replace(/^https?:\/\//,"");
+  }
+  function hostLabel(host){
+    try { return new URL(host).host; } catch(e){ return host; }
+  }
+  function ensurePanel(section){
+    var box = document.getElementById("moses-mirror-panel");
+    if (box) return box;
+    box = document.createElement("div");
+    box.id = "moses-mirror-panel";
+    box.style.cssText = "max-width:72rem;margin:0 auto 3rem;padding:0 1.25rem;";
+    box.innerHTML = "<div style=\"color:#94a3b8;font-size:.85rem;font-weight:600;margin:0 0 .65rem\">GitHub 下载镜像（任选一个，主镜像不通可换备用）</div><div id=\"moses-mirror-list\" style=\"display:flex;flex-wrap:wrap;gap:.45rem\"></div>";
+    var wrap = section.querySelector(".max-w-6xl, .max-w-5xl") || section;
+    wrap.appendChild(box);
+    return box;
+  }
+  function fillMirrors(ghUrl){
+    var list = document.getElementById("moses-mirror-list");
+    if(!list) return;
+    list.innerHTML = "";
+    MIRRORS.forEach(function(host, i){
+      var a = document.createElement("a");
+      a.href = proxyOf(ghUrl, host);
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = hostLabel(host);
+      a.style.cssText = i===0
+        ? "display:inline-flex;align-items:center;padding:.35rem .75rem;border-radius:.35rem;font-size:.8rem;font-weight:700;text-decoration:none;background:#2dd4bf;color:#04201b;border:1px solid #2dd4bf"
+        : "display:inline-flex;align-items:center;padding:.35rem .75rem;border-radius:.35rem;font-size:.8rem;font-weight:600;text-decoration:none;background:transparent;color:#cbd5e1;border:1px solid #334155";
+      list.appendChild(a);
+    });
   }
   async function refresh(){
     try{
@@ -35,29 +74,26 @@ Error generating stack: `+e.message+`
     var section = document.getElementById("download");
     if(!section) return;
     var links = Array.prototype.slice.call(section.querySelectorAll("a.glass-card[href], a[href*='MOSES_Setup'], a[href*='github.com'], a[href*='gh.']"));
-    // 回退：下载区所有外链卡片
     if(links.length < 3){
       links = Array.prototype.slice.call(section.querySelectorAll("a[href]")).filter(function(a){
         return /MOSES_Setup|github\.com|gh\.|proxy/i.test(a.href);
       });
     }
-    if(links.length < 1) return;
-    var ghLink = links[links.length-1];
-    var primary = links[0];
-    var secondary = links.length > 2 ? links[1] : null;
-    ghLink.href = GH;
-    primary.href = proxyOf(GH, "https://gh.llkk.cc");
-    if(secondary) secondary.href = proxyOf(GH, "https://gh-proxy.com");
-    try{
-      var data = await fetch(CONVERT + encodeURIComponent(GH), {cache:"no-store"}).then(function(r){return r.json()});
-      var list = (data && data.data) || [];
-      if(list[0]) primary.href = list[0];
-      if(secondary && list[1]) secondary.href = list[1];
-    }catch(e){}
+    if(links.length >= 1){
+      var ghLink = links[links.length-1];
+      var primary = links[0];
+      var secondary = links.length > 2 ? links[1] : null;
+      ghLink.href = GH;
+      primary.href = proxyOf(GH, MIRRORS[0]);
+      if(secondary) secondary.href = proxyOf(GH, MIRRORS[1]);
+    }
+    ensurePanel(section);
+    fillMirrors(GH);
   }
   if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", refresh);
   else setTimeout(refresh, 800);
 })();
 </script>
+
 </body>
 </html>
