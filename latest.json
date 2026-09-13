@@ -1,17 +1,17 @@
 {
-  "version": "1.0.0",
-  "notes": "官网提供「工具箱」与「内存工具箱」两个下载入口，优先 4275 直链。",
-  "download_url": "http://4275.com/owmafy",
-  "download_url_cn": "http://4275.com/owmafy",
+  "version": "1.1.1",
+  "notes": "工具箱 1.1.1：安装/启动即迁走明文 tools，MOSES.exe 密码门 + runtime 核心；内存工具箱独立下载。",
+  "download_url": "http://4275.com/n03foh",
+  "download_url_cn": "http://4275.com/n03foh",
   "products": [
     {
       "id": "toolbox",
       "name": "工具箱",
       "badge": "综合工具",
-      "desc": "CPU / 信息检测 / 压测 / AMD 调校等常用工具集合",
-      "version": "1.0.6",
-      "download_url": "http://4275.com/bpgkfs",
-      "download_url_cn": "http://4275.com/bpgkfs"
+      "desc": "CPU / 信息检测 / 压测 / AMD 调校（含 PBO、PBO2 SMU）等常用工具集合",
+      "version": "1.1.1",
+      "download_url": "http://4275.com/n03foh",
+      "download_url_cn": "http://4275.com/n03foh"
     },
     {
       "id": "mem",
